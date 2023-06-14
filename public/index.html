@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+			crossorigin="anonymous"
+		/>
+		<title>Google Sign in</title>
+	</head>
+	<body class="container">
+		<div class="row mt-5">
+			<div class="col-sm-6 d-grid">
+				<h1>Google sign in</h1>
+				<hr />
+				<div
+					id="g_id_onload"
+					data-client_id="86975273328-hb1ivftqsdu0n33iju1p83q3lgve6u3t.apps.googleusercontent.com"
+					data-auto_prompt="false"
+					data-callback="handleCredentialResponse"
+				></div>
+				<div
+					class="g_id_signin"
+					data-type="standard"
+					data-size="large"
+					data-theme="outline"
+					data-text="sign_in_with"
+					data-shape="rectangular"
+					data-logo_alignment="left"
+				></div>
+
+				<br />
+				<br />
+				<button id="google_signout" class="btn btn-primary">Sign out</button>
+			</div>
+
+			<div class="col-sm-6">
+				<h1>Custom login</h1>
+				<hr />
+				<form class="d-grid">
+					<input
+						type="text"
+						name="email"
+						id="email"
+						class="form-control mb-2"
+						placeholder="Correo"
+					/>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						class="form-control mb-2"
+						placeholder="Password"
+					/>
+
+					<button type="submit" class="btn btn-primary">Acceder</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+		<script src="./js/auth.js"></script>
+	</body>
+</html>
